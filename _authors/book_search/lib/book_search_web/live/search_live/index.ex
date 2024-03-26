@@ -94,14 +94,7 @@ defmodule BookSearchWeb.SearchLive.Index do
               >
               <h3 class="text-sm font-semibold text-gray-800">
                 <%!-- <.link patch={~p"/book/:id/metadata"}><%= result.title %></.link> --%>
-                <a
-                  href{~p"/book/#{result.id}"}
-                  class="hover:underline
-                  focus:outline-none"
-                >
-                  <span class="absolute inset-0" aria-hidden="true"></span>
-                  <%= result.title %>
-                </a>
+                <.link patch={~p"/book/:id/metadata"}><%= result.title %></.link>
               </h3>
               <p class="mt-1 text-sm text-gray-600 line-clamp-2">
                 <%= result.author %>

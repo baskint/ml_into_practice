@@ -50,10 +50,12 @@ defmodule BookSearch.Library do
 
   """
   def create_book(attrs \\ %{}) do
+    book =
     %Book{}
     |> Book.changeset(attrs)
-    |> Repo.insert()
-  end
+    |> Book.put_embedding()
+    Repo.insert(book)
+    end
 
   @doc """
   Updates a book.
