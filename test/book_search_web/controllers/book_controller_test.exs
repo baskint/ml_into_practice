@@ -3,8 +3,18 @@ defmodule BookSearchWeb.BookControllerTest do
 
   import BookSearch.LibraryFixtures
 
-  @create_attrs %{description: "some description", title: "some title", author: "some author", embedding: "some embedding"}
-  @update_attrs %{description: "some updated description", title: "some updated title", author: "some updated author", embedding: "some updated embedding"}
+  @create_attrs %{
+    description: "some description",
+    title: "some title",
+    author: "some author",
+    embedding: "some embedding"
+  }
+  @update_attrs %{
+    description: "some updated description",
+    title: "some updated title",
+    author: "some updated author",
+    embedding: "some updated embedding"
+  }
   @invalid_attrs %{description: nil, title: nil, author: nil, embedding: nil}
 
   describe "index" do
