@@ -13,10 +13,10 @@ defmodule BookSearch.Application do
       {DNSCluster, query: Application.get_env(:book_search, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: BookSearch.PubSub},
       {Nx.Serving,
-      serving: Nx.Serving.jit(&BookSearch.Model.serving/1),
-      name: BookSearchModel,
-      batch_size: 10,
-      batch_timeout: 100},
+       serving: Nx.Serving.jit(&BookSearch.Model.serving/1),
+       name: BookSearchModel,
+       batch_size: 10,
+       batch_timeout: 100},
       # Start the Finch HTTP client for sending emails
       {Finch, name: BookSearch.Finch},
       # Start a worker by calling: BookSearch.Worker.start_link(arg)
